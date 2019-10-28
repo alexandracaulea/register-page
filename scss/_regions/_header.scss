@@ -1,0 +1,9 @@
+.main-header {
+  padding: 31px 15px 21px 15px;
+
+  @include breakpoint(xl) {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

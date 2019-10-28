@@ -1,0 +1,26 @@
+.intro {
+  padding-bottom: 125px;
+  padding-top: 95px;
+  text-align: center;
+  box-shadow: inset 0px 8px 8px -5px #0c8cb9, inset 0px -8px 8px -5px #0c8cb9;
+  @include vars(background-color, primary-blue);
+  @extend %gutter-left-right;
+  @include breakpoint(sm) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  h1 {
+    margin: 0 0 15px 0;
+    font-size: 34px;
+    @include vars(color, white);
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    @include vars(color, light-blue);
+  }
+}

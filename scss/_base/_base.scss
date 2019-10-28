@@ -1,0 +1,43 @@
+:root {
+  @each $property, $value in $vars {
+    --#{$property}: #{$value};
+  }
+}
+
+::-moz-selection {
+  @include vars(background-color, primary-blue);
+  @include vars(color, black);
+}
+
+::selection {
+  @include vars(background-color, primary-blue);
+  @include vars(color, black);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+
+  &:focus {
+    outline: 1px solid #0ea5dc;
+  }
+}

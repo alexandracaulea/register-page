@@ -1,0 +1,34 @@
+// Generate custom variables and add support for older browsers
+@mixin vars($property, $variable) {
+  #{$property}: map-get($vars, $variable);
+  #{$property}: var(--#{$variable});
+}
+
+// breakpoint mixin
+@mixin breakpoint($size) {
+  @if $size == xxs {
+    @media (min-width: 320px) {
+      @content;
+    }
+  } @else if $size == xs {
+    @media (min-width: 420px) {
+      @content;
+    }
+  } @else if $size == sm {
+    @media (min-width: 576px) {
+      @content;
+    }
+  } @else if $size == md {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $size == lg {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $size == xl {
+    @media (min-width: 1140px) {
+      @content;
+    }
+  }
+}
