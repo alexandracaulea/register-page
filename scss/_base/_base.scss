@@ -11,7 +11,7 @@
 
 ::selection {
   @include vars(background-color, primary-blue);
-  @include vars(color, black);
+  @include vars(color, black-color);
 }
 
 html {
